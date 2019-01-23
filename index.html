@@ -12,7 +12,8 @@
     <!-- can't declare variables or evaluate if statements -->
     <!-- we may use ternary statement -->
     <h1>{{ header.toLocaleUpperCase() }}</h1>
-    <input v-model="newItem" type="text" placeholder="add an item">
+    <input v-model="newItem" type="text" placeholder="add an item" @:keyup.enter="items.push(newItem)">
+    <button class="btn btn-primary" @:click=items.push(newItem)>Save Item</button>
     <ul>
       <li v-for="item in items">{{ item }}</li>
     </ul>
