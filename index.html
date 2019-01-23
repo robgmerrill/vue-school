@@ -8,7 +8,10 @@
 </head>
 <body>
   <div id="shopping-list">
-    <h1>{{ header }}</h1>
+    <!-- can only evaluate one expression at a time -->
+    <!-- can't declare variables or evaluate if statements -->
+    <!-- we may use ternary statement -->
+    <h1>{{ header.toLocaleUpperCase() }}</h1>
     <input type="text" v-model="header">
   </div>
   <script src="https://unpkg.com/vue"></script>
@@ -16,7 +19,7 @@
     var shoppingList = new Vue({
       el: '#shopping-list',
       data: {
-        header: 'I am populating the header with content'
+        header: 'shopping list app'
       }
     })
   </script>
